@@ -5,26 +5,26 @@
 \title{A Flexible Microarray Data Simulation Model}
 
 \description{madsim allows to generate two conditions biological synthetic
-                    microarray dataset whith known characterics. These data
+                    microarray dataset whith known characteristics. These data
                     have similar behavior as those obtained with current
-                    microaray platforms.}
+                    microarray platforms.}
 \details{
 \tabular{ll}{
              Package: \tab madsim\cr
              Type: \tab Package\cr
-             Version: \tab 1.0\cr
-             Date: \tab 2013-02-25\cr
-             License: \tab PL-2\cr
+             Version: \tab 1.1\cr
+             Date: \tab 2013-04-17\cr
+             License: \tab GPL (>=2.0)\cr
              }
 
-             This package has only one fucntion
+             This package has only one function
 }
 
 \author{Doulaye Dembele
     Maintainer: Doulaye Dembele <doulaye@igbmc.fr>}
 
 \references{Dembele D. (2013), A Flexible Microarray Data Simulation Model, 
-                    submitted to Microarrays}
+                    Microarrays, 2013, 2(2):115-130}
 
 \keyword{ package }
 
