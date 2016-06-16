@@ -1,1 +1,5 @@
 exportPattern("^[[:alpha:]]+")
+
+importFrom("graphics", "abline", "plot")
+importFrom("utils", "write.table")
+importFrom("stats", "rbeta", "rexp", "rnorm", "runif", "sd")
