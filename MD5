@@ -1,7 +1,7 @@
-bee7137998a4cfb7472760e921288548 *DESCRIPTION
+a608a39a1a87b0576bfa86a160c36e94 *DESCRIPTION
 4309106a079d2a569bd70a8d670216c0 *NAMESPACE
-7c5807cd80c257d710a6c78e36b51a9a *R/madsim.R
+793596b5621447258202f5bda9b2501c *R/madsim.R
 5a2c6b5d636c20d62443d880a2a061fc *data/madsim_test.rda
-df1feff0dcf0cbf631865c147ed4ba6a *man/madsim-package.Rd
-f661a67707cfa189bfff5123e2f5b567 *man/madsim.Rd
-5664556525415799a733593a6a789bc1 *man/madsim_test.Rd
+24e462d801dffb10d46bccff8af18f6d *man/madsim-package.Rd
+611c79952b5ac5cde0251ca178d18c3d *man/madsim.Rd
+ed7afbd8965e9f4440e9ae32496d2616 *man/madsim_test.Rd

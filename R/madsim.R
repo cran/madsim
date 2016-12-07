@@ -12,15 +12,10 @@ function(mdata = NULL, n = 10000, ratio = 0,
     if (n<100) n <- 100;
 
     if (n1>100) {   # mdata is not NULL
-        if (n == 0) {
-           n <- n1;
-           x2 <- mdata;
-        } else {
-                  if (n < n1) {
-                     x2 <- sample(mdata, n, replace = FALSE);
-                  } else {
-                     x2 <- sample(mdata, n, replace = TRUE);
-                  }
+        if (n == 0) { n <- n1; x2 <- mdata; }
+        else {
+                  if (n < n1) { x2 <- sample(mdata, n, replace = FALSE); }
+                  else { x2 <- sample(mdata, n, replace = TRUE); }
            }
     } else {        # mdata is NULL
            x <- rbeta(n, 2, fparams$shape2);
@@ -32,12 +27,12 @@ function(mdata = NULL, n = 10000, ratio = 0,
     for (i in 1:n) {
         alpha <- dparams$lambda1*exp(-dparams$lambda1*x2[i]);
         xi_val <- runif(m, min = (1-alpha)*x2[i], max = (1+alpha)*x2[i]);
-        if (sample(1:100,1) > (100*fparams$pde)) { # case of non DE gene
+        if (sample(1:1000,1) > (1000*fparams$pde)) { # case of non DE gene
            xdat[i,] <- xi_val;
         } else { # case of DE gene
                xi1 <- xi_val[1:(m1+1)];
                mude <- dparams$muminde + rexp(1, dparams$lambda2);
-               if (sample(1:100,1) > (100*fparams$sym)) { # up regulated gene
+               if (sample(1:1000,1) > (1000*fparams$sym)) { # up regulated gene
                   xi2 <- xi_val[(m1+2):m] + rnorm(m2, mean = mude, sd = dparams$sdde);
                   xid[i] <- 1;
                } else { # down regulated gene
@@ -57,7 +52,7 @@ function(mdata = NULL, n = 10000, ratio = 0,
        xdat <- xdat + ndat;
     }
     xdata <- matrix(c(rep(0,n*(m-1))), ncol = (m-1));
-    
+
     if (ratio) {  # ratio expression values
        xdata <- xdat[,2:m] - xdat[,1];
     } else {    # absolute expression values
